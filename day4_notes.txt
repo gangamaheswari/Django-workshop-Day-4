@@ -1,0 +1,51 @@
+ save():
+============================
+data=student(name='pavan',rollnum='22A91A61J4',age='19',mobile='323454322',email='pavan12@gmail.com',address='samalkot')
+>>> data.save()
+>>> data
+
+create():
+=================================
+data=student.objects.create(name='alkhaya',rollnum='22A91A690',age='19',mobile='2345671234',email='nam12@gmail.com',address='badrachalam')
+data
+
+read all rows:
+=============================
+data=student.objects.all()
+data
+
+access specific row:
+============================
+student.objects.get(id=6)
+
+
+access duplicate data(filter):
+=================================
+student.objects.filter(name='ganga')
+
+
+slicing:
+=====================================
+s=student.objects.all()[:7]
+s
+
+update:
+====================================
+g=student.objects.get(id=8)
+g
+g.name="harsha"
+g.save()
+g
+
+
+update multiple values:
+==================================
+g=student.objects.all().update(age='20')
+g
+
+
+delete record:
+===================================
+g=student.objects.get(id=6)
+g
+g.delete()
